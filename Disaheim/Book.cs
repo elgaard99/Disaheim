@@ -27,7 +27,6 @@ namespace Disaheim
         public Book(string itemId, string title) : this(itemId)
         { 
             Title = title;
-            this.price = 0;
         }
 
         public Book(string itemId, string title, double price) : this(itemId, title) 
