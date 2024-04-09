@@ -20,6 +20,8 @@ namespace Disaheim
         public Amulet(string itemId)
         {  
             ItemId = itemId;
+            this.design = "";
+            this.quality = Level.medium;
         }
 
         public Amulet(string itemId, Level quality) : this(itemId)
@@ -30,6 +32,11 @@ namespace Disaheim
         public Amulet(string itemId, Level quality, string design) : this(itemId, quality)
         {
             Design = design;
+        }
+
+        public override string ToString()
+        {
+            return $"ItemId: {itemId}, Quality: {quality.ToString()}, Design: {design}";
         }
     }
 }
