@@ -34,5 +34,16 @@ namespace Disaheim
 
             return amuletPrice;
         }
+    
+        public double GetValueOfCourse(Course course) 
+        {
+            
+            int hours = course.DurationInMinutes / 60;
+            if (course.DurationInMinutes % 60 != 0)
+                hours++;
+
+            return hours * 875; 
+        }
+
     }
 }
