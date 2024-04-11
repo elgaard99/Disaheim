@@ -24,5 +24,10 @@ namespace DisaheimTest
         { 
             DurationInMinutes = durationInMinutes;
         }
+
+        public override string ToString()
+        {
+            return $"Name: {name}, Duration in Minutes: {durationInMinutes}";
+        }
     }
 }
