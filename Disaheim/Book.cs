@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class Book
+    public class Book : Merchandise
     {
-        string itemId;
-        public string ItemId { get {  return itemId; } set { itemId = value; } }
 
         string title;
         public string Title { get { return title; } set { title = value; } }
@@ -17,9 +15,8 @@ namespace Disaheim
         double price;
         public double Price { get { return price; } set { price = value; } }
 
-        public Book(string itemId)
+        public Book(string itemId) : base(itemId)
         {
-            ItemId = itemId;
             this.title = "";
             this.price = 0;
         }
@@ -36,7 +33,7 @@ namespace Disaheim
 
         public override string ToString()
         {
-            return $"ItemId: {itemId}, Title: {title}, Price: {price}";
+            return $"ItemId: {ItemId}, Title: {title}, Price: {price}";
         }
     }
 }
