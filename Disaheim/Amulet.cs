@@ -15,8 +15,9 @@ namespace Disaheim
         Level quality;
         public Level Quality {  get { return quality; } set {  quality = value; } }
         
-        public Amulet(string itemId) : base(itemId)
+        public Amulet(string itemId)
         {  
+            ItemId = itemId;
             this.design = "";
             this.quality = Level.medium;
         }

@@ -15,8 +15,9 @@ namespace Disaheim
         double price;
         public double Price { get { return price; } set { price = value; } }
 
-        public Book(string itemId) : base(itemId)
+        public Book(string itemId)
         {
+            ItemId = itemId;
             this.title = "";
             this.price = 0;
         }
