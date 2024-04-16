@@ -23,20 +23,6 @@ namespace Disaheim
             Amulets = new List<Amulet>();
             Courses = new List<Course>();
         }
-
-        public void AddToList(Book book)
-        {
-            books.Add(book);
-        }
-
-        public void AddToList(Amulet amulet)
-        {
-            amulets.Add(amulet);
-        }
-
-        public void AddToList(Course course)
-        {
-            courses.Add(course);
-        }
+       
     }
 }
