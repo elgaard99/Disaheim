@@ -19,9 +19,9 @@ namespace DisaheimTest
 
         CourseRepository courses;
 
-        MerchandiseRepository books;
+        ValueableRepository books;
 
-        MerchandiseRepository amulets;
+        ValueableRepository amulets;
 
         [TestInitialize]
 
@@ -44,9 +44,9 @@ namespace DisaheimTest
 
             courses = new CourseRepository();
 
-            books = new MerchandiseRepository();
+            books = new ValueableRepository();
 
-            amulets = new MerchandiseRepository();
+            amulets = new ValueableRepository();
 
             // Act
 

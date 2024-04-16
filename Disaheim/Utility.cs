@@ -9,14 +9,11 @@ namespace Disaheim
     public class Utility
     {
 
-        double lowQualityValue = 12.5;
-        public double LowQualityValue {  get { return lowQualityValue; } set {  lowQualityValue = value; } }
+        public double LowQualityValue { get; set; } = 12.5;
 
-        double mediumQualityValue = 20;
-        public double MediumQualityValue { get { return mediumQualityValue; } set {  mediumQualityValue = value; } }
+        public double MediumQualityValue { get; set; } = 20;
 
-        double highQualityValue = 27.5;
-        public double HighQualityValue { get { return highQualityValue; } set { highQualityValue = value; } }
+        public double HighQualityValue { get; set; } = 27.5;
 
         double courseHourValue = 875;
         public double CourseHourValue { get { return courseHourValue; } set {  courseHourValue = value; } }
@@ -42,15 +39,15 @@ namespace Disaheim
                 switch (amulet.Quality)
                 {
                     case Level.low:
-                        amuletPrice = lowQualityValue;
+                        amuletPrice = LowQualityValue;
                         break;
 
                     case Level.medium:
-                        amuletPrice = mediumQualityValue;
+                        amuletPrice = MediumQualityValue;
                         break;
 
                     case Level.high:
-                        amuletPrice = highQualityValue;
+                        amuletPrice = HighQualityValue;
                         break;
                 }
 
