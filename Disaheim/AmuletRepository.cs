@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    internal class AmuletRepository
+    public class AmuletRepository
     {
-        List<Amulet> amulets;
+        List<Amulet> amulets = new List<Amulet>();
 
         public void AddAmulet(Amulet amulet)
         { amulets.Add(amulet); }

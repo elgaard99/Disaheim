@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    internal class CourseRepository
+    public class CourseRepository
     {
         
-        List<Course> courses;
+        List<Course> courses = new List<Course>();
 
         public void AddCourse(Course course)
         { courses.Add(course); }
 
         public Course GetCourse(string itemid)
         {
+
             foreach (Course course in courses)
             {
                 if (course.Name == itemid)
@@ -28,6 +29,7 @@ namespace Disaheim
 
         public double GetTotalValue()
         {
+
             double total = 0;
             Utility utility = new Utility();
 
@@ -35,6 +37,7 @@ namespace Disaheim
                 total += utility.GetValueOfCourse(course);
 
             return total;
+
         }
     }
 }

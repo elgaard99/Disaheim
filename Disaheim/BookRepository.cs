@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    internal class BookRepository
+    public class BookRepository
     {
-        List<Book> books;
+        List<Book> books = new List<Book>();
 
         public void AddBook(Book book)
         { books.Add(book); }
