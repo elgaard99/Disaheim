@@ -49,7 +49,7 @@ namespace DisaheimTest
 
             // Assert
 
-            Assert.AreEqual(0.0, utility.GetValueOfBook(b1));
+            Assert.AreEqual(0.0, utility.GetValueOfMerchandise(b1));
 
         }
 
@@ -61,7 +61,7 @@ namespace DisaheimTest
 
             // Assert
 
-            Assert.AreEqual(0.0, utility.GetValueOfBook(b2));
+            Assert.AreEqual(0.0, utility.GetValueOfMerchandise(b2));
 
         }
 
@@ -73,7 +73,7 @@ namespace DisaheimTest
 
             // Assert
 
-            Assert.AreEqual(123.55, utility.GetValueOfBook(b3));
+            Assert.AreEqual(123.55, utility.GetValueOfMerchandise(b3));
 
         }
 
@@ -85,7 +85,7 @@ namespace DisaheimTest
 
             // Assert
 
-            Assert.AreEqual(20.0, utility.GetValueOfAmulet(a1));
+            Assert.AreEqual(20.0, utility.GetValueOfMerchandise(a1));
 
         }
 
@@ -97,7 +97,7 @@ namespace DisaheimTest
 
             // Assert
 
-            Assert.AreEqual(27.5, utility.GetValueOfAmulet(a2));
+            Assert.AreEqual(27.5, utility.GetValueOfMerchandise(a2));
 
         }
 
@@ -109,7 +109,7 @@ namespace DisaheimTest
 
             // Assert
 
-            Assert.AreEqual(12.5, utility.GetValueOfAmulet(a3));
+            Assert.AreEqual(12.5, utility.GetValueOfMerchandise(a3));
 
         }
 

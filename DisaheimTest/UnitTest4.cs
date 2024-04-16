@@ -19,9 +19,9 @@ namespace DisaheimTest
 
         CourseRepository courses;
 
-        BookRepository books;
+        MerchandiseRepository books;
 
-        AmuletRepository amulets;
+        MerchandiseRepository amulets;
 
         [TestInitialize]
 
@@ -44,23 +44,23 @@ namespace DisaheimTest
 
             courses = new CourseRepository();
 
-            books = new BookRepository();
+            books = new MerchandiseRepository();
 
-            amulets = new AmuletRepository();
+            amulets = new MerchandiseRepository();
 
             // Act
 
-            books.AddBook(b1);
+            books.AddMerchandise(b1);
 
-            books.AddBook(b2);
+            books.AddMerchandise(b2);
 
-            books.AddBook(b3);
+            books.AddMerchandise(b3);
 
-            amulets.AddAmulet(a1);
+            amulets.AddMerchandise(a1);
 
-            amulets.AddAmulet(a2);
+            amulets.AddMerchandise(a2);
 
-            amulets.AddAmulet(a3);
+            amulets.AddMerchandise(a3);
 
             courses.AddCourse(c1);
 
@@ -76,7 +76,7 @@ namespace DisaheimTest
 
             // Assert
 
-            Assert.AreEqual(b2, books.GetBook("2"));
+            Assert.AreEqual(b2, books.GetMerchandise("2"));
 
         }
 
@@ -88,7 +88,7 @@ namespace DisaheimTest
 
             // Assert
 
-            Assert.AreEqual(a3, amulets.GetAmulet("13"));
+            Assert.AreEqual(a3, amulets.GetMerchandise("13"));
 
         }
 
