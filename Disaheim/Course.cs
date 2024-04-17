@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,11 @@ namespace Disaheim
         public override string ToString()
         {
             return $"Name: {name}, Duration in Minutes: {durationInMinutes}, Value: {GetValue()}";
+        }
+
+        public string StringToSave()
+        {
+            return $"COURSE;{Name};{DurationInMinutes};{CourseHourValue}";
         }
 
         public double GetValue()

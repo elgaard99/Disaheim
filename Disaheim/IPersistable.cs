@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public interface IValuable
+    public interface IPersistable
     {
+        void Save();
 
-        double GetValue();
+        void Save(string fileName);
 
-        string StringToSave();
+        void Load();
+
+        void Load(string fileName);
 
     }
 }

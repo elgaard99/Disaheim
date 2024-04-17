@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,11 @@ namespace Disaheim
         public override string ToString()
         {
             return $"ItemId: {ItemId}, Quality: {quality.ToString()}, Design: {design}";
+        }
+        
+        public string StringToSave()
+        {
+            return $"AMULET;{ItemId};{Design};{(int)Quality}";
         }
 
         public override double GetValue()

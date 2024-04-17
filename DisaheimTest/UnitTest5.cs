@@ -30,39 +30,27 @@ namespace DisaheimTest
             repo = new ValuableRepository();
 
             b1 = new Book("1");
-
             b2 = new Book("2", "Falling in Love with Yourself");
-
             b3 = new Book("3", "Spirits in the Night", 123.55);
 
             repo.AddValuable(b1);
-
             repo.AddValuable(b2);
-
             repo.AddValuable(b3);
 
             a1 = new Amulet("11");
-
             a2 = new Amulet("12", Level.high);
-
             a3 = new Amulet("13", Level.low, "Capricorn");
 
             repo.AddValuable(a1);
-
             repo.AddValuable(a2);
-
             repo.AddValuable(a3);
 
             c1 = new Course("Spådomskunst for nybegyndere");
-
             c2 = new Course("Magi – når videnskaben stopper", 157);
-
             c3 = new Course("Et indblik i Helleristning", 180);
 
             repo.AddValuable(c1);
-
             repo.AddValuable(c2);
-
             repo.AddValuable(c3);
 
         }

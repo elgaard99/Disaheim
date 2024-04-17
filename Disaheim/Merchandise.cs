@@ -18,5 +18,7 @@ namespace Disaheim
 
         public abstract double GetValue();
 
+        public abstract double StringToSave();
+
     }
 }

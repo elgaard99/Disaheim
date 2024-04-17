@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Xml.Linq;
+using System.IO.Enumeration;
 
 namespace Disaheim
 {
-    public class ValuableRepository
+    public class ValuableRepository : IPersistable
     {
         List<IValuable> valuables = new List<IValuable>();
 
@@ -51,5 +54,71 @@ namespace Disaheim
         {
             return valuables.Count;
         }
+
+        public void Save()
+        { Save(fileName: "ValuableRepository.txt"); }
+
+        public void Save(string fileName)
+        {
+
+            StreamWriter writer = new StreamWriter(fileName);
+            
+            try
+            {
+                foreach (IValuable valuable in valuables)
+                    writer.WriteLine(valuable.StringToSave());
+            
+            }
+            catch (Exception ex)
+            { throw ex; }
+
+            finally 
+            { writer.Close(); }
+            
+        }
+
+        public void Load()
+        { Load(fileName: "ValuableRepository.txt"); }
+
+        public void Load(string fileName)
+        {
+            string[] lines = File.ReadAllLines(fileName);
+
+            foreach (string line in lines)
+            {
+                string[] valuableData = line.Split(";");
+
+                switch (valuableData[0]) 
+                {
+                    case "BOOK":
+                        AddValuable(new Book(
+                            itemId: valuableData[1],
+                            title: valuableData[2],
+                            price: Convert.ToDouble(valuableData[3])));
+                        break;
+
+                    case "AMULET":
+
+                        Level q;
+                        Enum.TryParse(valuableData[3], out q);
+
+                        Amulet amulet = new Amulet(
+                            itemId: valuableData[1],
+                            design: valuableData[2],
+                            quality: q);
+
+                        AddValuable(amulet);
+                        break;
+
+                    case "COURSE":
+                        AddValuable(new Course(
+                            name: valuableData[1],
+                            durationInMinutes: int.Parse(valuableData[2])));
+                        break;
+                }
+            }
+                
+        }
+
     }
 }
