@@ -23,12 +23,12 @@ namespace Disaheim
         }
 
         public Book(string itemId, string title) : this(itemId)
-        { 
+        {
             Title = title;
         }
 
-        public Book(string itemId, string title, double price) : this(itemId, title) 
-        { 
+        public Book(string itemId, string title, double price) : this(itemId, title)
+        {
             Price = price;
         }
 
@@ -36,5 +36,14 @@ namespace Disaheim
         {
             return $"ItemId: {ItemId}, Title: {title}, Price: {price}";
         }
+
+        public double GetValue()
+        {
+            
+            return Price;
+
+        }
+
     }
+
 }

@@ -14,6 +14,8 @@ namespace Disaheim
         int durationInMinutes;
         public int DurationInMinutes { get {  return durationInMinutes; } set {  durationInMinutes = value; } }
 
+        public static double CourseHourValue { get; set; } = 875.0;
+
         public Course(string name) 
         { 
             Name = name;
@@ -28,6 +30,17 @@ namespace Disaheim
         public override string ToString()
         {
             return $"Name: {name}, Duration in Minutes: {durationInMinutes}";
+        }
+
+        public double GetValue()
+        {
+
+            int hours = DurationInMinutes / 60;
+            if (DurationInMinutes % 60 != 0)
+                hours++;
+
+            return hours * CourseHourValue;
+
         }
     }
 }

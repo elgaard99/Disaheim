@@ -15,5 +15,8 @@ namespace Disaheim
         {
             return "ItemId: " + itemId;
         }
+
+        public abstract double GetValue();
+
     }
 }

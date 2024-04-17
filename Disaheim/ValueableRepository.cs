@@ -8,17 +8,28 @@ namespace Disaheim
 {
     public class ValueableRepository
     {
-        List<IValueable> valueables = new List<Merchandise>();
+        List<IValueable> valueables = new List<IValueable>();
 
-        public void AddMerchandise(Merchandise merchandise)
-        { valueables.Add(merchandise); }
+        public void AddValueable(IValueable valueable)
+        { valueables.Add(valueable); }
 
-        public Merchandise GetMerchandise(string itemid)
+        public IValueable GetValueable(string id)
         { 
-            foreach (Merchandise merchandise in valueables) 
+            foreach (IValueable valueable in valueables) 
             { 
-                if (merchandise.ItemId == itemid)
-                    return merchandise;
+                if (valueable is Merchandise)
+                {
+                    Merchandise merchandise = (Merchandise)valueable;
+                    if (merchandise.ItemId == id)
+                        return merchandise;
+                }
+                
+                else if (valueable is Course)
+                {
+                    Course course = (Course)valueable;
+                    if (course.Name == id) 
+                        return course;
+                }
             }
 
             return null;
@@ -28,10 +39,9 @@ namespace Disaheim
         public double GetTotalValue()
         { 
             double total = 0;
-            Utility utility = new Utility();
 
-            foreach (Merchandise merchandise in valueables)
-                total += utility.GetValueOfMerchandise(merchandise);
+            foreach (IValueable valueable in valueables)
+                total += valueable.GetValue();
 
             return total;
 

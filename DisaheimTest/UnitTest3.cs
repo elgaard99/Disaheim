@@ -61,7 +61,7 @@ namespace DisaheimTest
 
             // Assert
 
-            Assert.AreEqual(b3, controller.Books[2]);
+            Assert.AreEqual(b3, controller.Valueables[2]);
 
         }
 

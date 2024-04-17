@@ -50,17 +50,17 @@ namespace DisaheimTest
 
             // Act
 
-            books.AddMerchandise(b1);
+            books.AddValueable(b1);
 
-            books.AddMerchandise(b2);
+            books.AddValueable(b2);
 
-            books.AddMerchandise(b3);
+            books.AddValueable(b3);
 
-            amulets.AddMerchandise(a1);
+            amulets.AddValueable(a1);
 
-            amulets.AddMerchandise(a2);
+            amulets.AddValueable(a2);
 
-            amulets.AddMerchandise(a3);
+            amulets.AddValueable(a3);
 
             courses.AddCourse(c1);
 
@@ -76,7 +76,7 @@ namespace DisaheimTest
 
             // Assert
 
-            Assert.AreEqual(b2, books.GetMerchandise("2"));
+            Assert.AreEqual(b2, books.GetValueable("2"));
 
         }
 
@@ -88,7 +88,7 @@ namespace DisaheimTest
 
             // Assert
 
-            Assert.AreEqual(a3, amulets.GetMerchandise("13"));
+            Assert.AreEqual(a3, amulets.GetValueable("13"));
 
         }
 
