@@ -37,7 +37,7 @@ namespace Disaheim
             return $"ItemId: {ItemId}, Title: {title}, Price: {price}";
         }
 
-        public string StringToSave()
+        public override string StringToSave()
         {
             return $"BOOK;{ItemId};{Title};{Price}";
         }

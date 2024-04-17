@@ -44,7 +44,7 @@ namespace Disaheim
             return $"ItemId: {ItemId}, Quality: {quality.ToString()}, Design: {design}";
         }
         
-        public string StringToSave()
+        public override string StringToSave()
         {
             return $"AMULET;{ItemId};{Design};{(int)Quality}";
         }
