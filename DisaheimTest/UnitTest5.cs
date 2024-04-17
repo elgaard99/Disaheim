@@ -14,9 +14,7 @@ namespace DisaheimTest
     {
 
         Book b1, b2, b3;
-
         Amulet a1, a2, a3;
-
         Course c1, c2, c3;
 
         ValuableRepository repo;

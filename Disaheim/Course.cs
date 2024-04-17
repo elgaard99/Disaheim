@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class Course : IValueable
+    public class Course : IValuable
     {
         string name;
         public string Name { get { return name; } set { name = value; } }
@@ -29,7 +29,7 @@ namespace Disaheim
 
         public override string ToString()
         {
-            return $"Name: {name}, Duration in Minutes: {durationInMinutes}";
+            return $"Name: {name}, Duration in Minutes: {durationInMinutes}, Value: {GetValue()}";
         }
 
         public double GetValue()

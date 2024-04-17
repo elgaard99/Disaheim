@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class ValueableRepository
+    public class ValuableRepository
     {
-        List<IValueable> valueables = new List<IValueable>();
+        List<IValuable> valuables = new List<IValuable>();
 
-        public void AddValueable(IValueable valueable)
-        { valueables.Add(valueable); }
+        public void AddValuable(IValuable valueable)
+        { valuables.Add(valueable); }
 
-        public IValueable GetValueable(string id)
+        public IValuable GetValuable(string id)
         { 
-            foreach (IValueable valueable in valueables) 
+            foreach (IValuable valueable in valuables) 
             { 
                 if (valueable is Merchandise)
                 {
@@ -40,11 +40,16 @@ namespace Disaheim
         { 
             double total = 0;
 
-            foreach (IValueable valueable in valueables)
+            foreach (IValuable valueable in valuables)
                 total += valueable.GetValue();
 
             return total;
 
+        }
+
+        public int Count()
+        {
+            return valuables.Count;
         }
     }
 }

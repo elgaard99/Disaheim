@@ -10,16 +10,16 @@ namespace Disaheim
     public class Controller
     {
 
-        public List<IValueable> Valueables { get; set; }
+        public ValuableRepository ValuableRepo { get; set; }
 
         public Controller()
-        { 
-            Valueables = new List<IValueable>();
+        {
+            ValuableRepo = new ValuableRepository();
         }
 
-        public void AddToList(IValueable valueable)
+        public void AddToList(IValuable valueable)
         {
-            Valueables.Add(valueable);
+            ValuableRepo.AddValuable(valueable);
         }
        
     }

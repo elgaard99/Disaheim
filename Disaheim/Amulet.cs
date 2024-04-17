@@ -43,7 +43,7 @@ namespace Disaheim
             return $"ItemId: {ItemId}, Quality: {quality.ToString()}, Design: {design}";
         }
 
-        public double GetValue()
+        public override double GetValue()
         {
 
             double amuletPrice = -1;
