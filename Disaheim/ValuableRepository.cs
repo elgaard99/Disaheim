@@ -55,10 +55,7 @@ namespace Disaheim
             return valuables.Count;
         }
 
-        public void Save()
-        { Save(fileName: "ValuableRepository.txt"); }
-
-        public void Save(string fileName)
+        public void Save(string fileName = "ValuableRepository.txt")
         {
 
             StreamWriter writer = new StreamWriter(fileName);
@@ -77,10 +74,7 @@ namespace Disaheim
             
         }
 
-        public void Load()
-        { Load(fileName: "ValuableRepository.txt"); }
-
-        public void Load(string fileName)
+        public void Load(string fileName = "ValuableRepository.txt")
         {
             string[] lines = File.ReadAllLines(fileName);
 
